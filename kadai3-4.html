@@ -31,7 +31,12 @@
 
             // 商品購入の関数
             function buyItem(no) {
-                // ここにコードを書く
+                console.log("商品番号:" + items [no-1].id + "," +"商品名:" + items [no-1].name);// ここにコードを書く
+                if (items [no-1].stock > 0){
+                    items [no-1].stock = items [no-1].stock -1;
+                }else{
+                    console.log("在庫がありません。");
+                }// ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
 
